@@ -1,0 +1,54 @@
+### READ Metadata
+
+GET http://localhost:4004/odata/v4/boot_dev/$metadata
+
+### GET Training single
+
+GET http://localhost:4004/odata/v4/boot_dev/training
+
+### GET Training single
+
+GET http://localhost:4004/odata/v4/boot_dev/training/b1df83db-980a-437d-9020-bdff2c5c74f7
+
+### POST
+
+POST http://localhost:4004/odata/v4/boot_dev/training
+Content-Type: application/json
+
+{
+    "name": "BTP-Bootcamp",
+  "skill": "CAPM",
+  "trainer": "Abhijeet Ranjan",
+  "location": "Virtual",
+  "room": "Zoom",
+  "trainee": null,
+  "duration": "5"
+}
+
+### PUT
+
+PUT http://localhost:4004/odata/v4/boot_dev/training/a005bf33-5215-4a7e-9fae-e84d74ef051e
+Content-Type: application/json
+
+{
+     "trainer": "Abhij"
+}
+
+### Patch
+
+PATCH http://localhost:4004/odata/v4/boot_dev/training/a005bf33-5215-4a7e-9fae-e84d74ef051e
+Content-Type: application/json
+
+{
+    "name": "BTP-Bootcamp",
+  "skill": "CAPM",
+  "trainer": "Abhijeet Ranjan",
+  "location": "Virtual"
+}
+
+### Delete
+
+DELETE http://localhost:4004/odata/v4/boot_dev/training/a005bf33-5215-4a7e-9fae-e84d74ef051e
+Content-Type: application/json
+
+{}
